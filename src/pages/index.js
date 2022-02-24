@@ -36,13 +36,13 @@ const sliderConfigs = [
   {
     id: "ASYMPTOMATIC",
     defaultValue: DEFAULT_DISEASE_VALUES["ASYMPTOMATIC"],
-    title: "Asymptomatic",
+    title: "Asymptomatic Rate",
     step: 0.01,
   },
   {
     id: "DELAY_R",
     defaultValue: DEFAULT_DISEASE_VALUES["DELAY_R"],
-    title: "Delay R",
+    title: "Days Before Recovery or Death",
     step: 1,
     min: 10,
     max: 14,
@@ -50,7 +50,7 @@ const sliderConfigs = [
   {
     id: "DELAY_Q",
     defaultValue: DEFAULT_DISEASE_VALUES["DELAY_R"],
-    title: "Delay Q",
+    title: "Days Before a Positive Case is Quarantined",
     step: 1,
     min: 2,
     max: 5,
@@ -63,7 +63,8 @@ const sliderConfigs = [
   {
     id: "VACCINE_MAX",
     defaultValue: DEFAULT_DISEASE_VALUES["VACCINE_MAX"],
-    title: "Vaccine Max",
+    title: "Max Proportion of Population Vaccinated",
+    step: 0.05,
   },
   {
     id: "VACCINE_EFFECTIVENESS",
@@ -73,7 +74,7 @@ const sliderConfigs = [
   {
     id: "DELAY_VACCINE",
     defaultValue: DEFAULT_DISEASE_VALUES["DELAY_VACCINE"],
-    title: "Delay Vaccine (Days)",
+    title: "Days Before Vaccinations are Introduced",
     step: 1,
     min: 0,
     max: 400,
@@ -118,6 +119,7 @@ const IndexPage = () => {
     let data = new DiseaseModel(modelValues).getData();
     const input2config = {
       Cases: data.covidInfected,
+      "New Cases": data.newInfected,
       Deaths: data.dead,
       Asymptomatic: data.asymptomatic,
       Symptomatic: data.symptomatic,
@@ -218,6 +220,7 @@ const IndexPage = () => {
               defaultValue="Cases"
             >
               <option>Cases</option>
+              <option>New Cases</option>
               <option>Deaths</option>
               <option>Asymptomatic</option>
               <option>Symptomatic</option>

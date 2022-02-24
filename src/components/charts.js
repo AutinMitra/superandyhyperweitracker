@@ -25,6 +25,7 @@ Chart.register(
 
 const id2color = {
   Cases: '#357DED',
+  "New Cases": '#FFBF00',
   Deaths: '#F7567C',
   Asymptomatic: '#B7C0EE',
   Symptomatic: '#861388',
