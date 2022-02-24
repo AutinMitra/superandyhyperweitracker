@@ -17,14 +17,20 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/red-hat-display": "^4.5.4",
     "@mdx-js/react": "^1.6.22",
+    "chart.js": "^3.7.1",
+    "framer-motion": "^6.2.7",
     "gatsby": "^4.7.2",
     "gatsby-plugin-image": "^2.8.0",
+    "gatsby-plugin-layout": "^3.8.0",
     "gatsby-plugin-sharp": "^4.8.0",
     "gatsby-plugin-theme-ui": "^0.13.1",
     "gatsby-source-filesystem": "^4.8.0",
     "gatsby-transformer-sharp": "^4.8.0",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
+    "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.1",
     "theme-ui": "^0.13.1"
   }
